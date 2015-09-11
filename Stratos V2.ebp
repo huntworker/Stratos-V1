@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<EmBlocks_project_file>
+	<EmBlocksVersion release="2.30" revision="1" />
+	<FileVersion major="1" minor="0" />
+	<Project>
+		<Option title="Stratos V2" />
+		<Option pch_mode="2" />
+		<Option compiler="armgcc_eb" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin\Debug\Stratos V2.elf" />
+				<Option object_output="obj\Debug\" />
+				<Option type="0" />
+				<Option create_hex="1" />
+				<Option compiler="armgcc_eb" />
+				<Option projectDeviceOptionsRelation="0" />
+				<Compiler>
+					<Add option="-std=c99" />
+					<Add option="-Wall" />
+					<Add option="-fdata-sections" />
+					<Add option="-ffunction-sections" />
+					<Add option="-O0" />
+					<Add option="-g3" />
+				</Compiler>
+				<Assembler>
+					<Add option="-Wa,--gdwarf-2" />
+				</Assembler>
+				<Linker>
+					<Add option="-Wl,--gc-sections" />
+				</Linker>
+			</Target>
+		</Build>
+		<Device>
+			<Add option="$device=cortex-m3" />
+			<Add option="$stack=0x0100" />
+			<Add option="$heap=0x0000" />
+			<Add option="$lscript=./stm32f205rb_flash.ld" />
+		</Device>
+		<Compiler>
+			<Add option="-mfloat-abi=soft" />
+			<Add option="-DSTM32F205RB" />
+			<Add option="-fno-strict-aliasing" />
+			<Add option="-DSTM32F2XX" />
+			<Add option="-DUSE_STDPERIPH_DRIVER" />
+			<Add directory=".\inc" />
+			<Add directory=".\src" />
+			<Add directory=".\cmsis" />
+			<Add directory=".\SPL\inc" />
+			<Add directory=".\SPL\src" />
+		</Compiler>
+		<Linker>
+			<Add option="-eb_start_files" />
+			<Add option="-eb_lib=n" />
+		</Linker>
+		<Unit filename="SPL\inc\misc.h" />
+		<Unit filename="SPL\inc\stm32f2xx_adc.h" />
+		<Unit filename="SPL\inc\stm32f2xx_can.h" />
+		<Unit filename="SPL\inc\stm32f2xx_crc.h" />
+		<Unit filename="SPL\inc\stm32f2xx_cryp.h" />
+		<Unit filename="SPL\inc\stm32f2xx_dac.h" />
+		<Unit filename="SPL\inc\stm32f2xx_dbgmcu.h" />
+		<Unit filename="SPL\inc\stm32f2xx_dcmi.h" />
+		<Unit filename="SPL\inc\stm32f2xx_dma.h" />
+		<Unit filename="SPL\inc\stm32f2xx_exti.h" />
+		<Unit filename="SPL\inc\stm32f2xx_flash.h" />
+		<Unit filename="SPL\inc\stm32f2xx_fsmc.h" />
+		<Unit filename="SPL\inc\stm32f2xx_gpio.h" />
+		<Unit filename="SPL\inc\stm32f2xx_hash.h" />
+		<Unit filename="SPL\inc\stm32f2xx_i2c.h" />
+		<Unit filename="SPL\inc\stm32f2xx_iwdg.h" />
+		<Unit filename="SPL\inc\stm32f2xx_pwr.h" />
+		<Unit filename="SPL\inc\stm32f2xx_rcc.h" />
+		<Unit filename="SPL\inc\stm32f2xx_rng.h" />
+		<Unit filename="SPL\inc\stm32f2xx_rtc.h" />
+		<Unit filename="SPL\inc\stm32f2xx_sdio.h" />
+		<Unit filename="SPL\inc\stm32f2xx_spi.h" />
+		<Unit filename="SPL\inc\stm32f2xx_syscfg.h" />
+		<Unit filename="SPL\inc\stm32f2xx_tim.h" />
+		<Unit filename="SPL\inc\stm32f2xx_usart.h" />
+		<Unit filename="SPL\inc\stm32f2xx_wwdg.h" />
+		<Unit filename="SPL\src\misc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f2xx_adc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f2xx_can.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f2xx_crc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f2xx_cryp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f2xx_cryp_aes.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f2xx_cryp_des.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f2xx_cryp_tdes.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f2xx_dac.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f2xx_dbgmcu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f2xx_dcmi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f2xx_dma.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f2xx_exti.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f2xx_flash.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f2xx_fsmc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f2xx_gpio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f2xx_hash.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f2xx_hash_md5.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f2xx_hash_sha1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f2xx_i2c.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f2xx_iwdg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f2xx_pwr.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f2xx_rcc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f2xx_rng.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f2xx_rtc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f2xx_sdio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f2xx_spi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f2xx_syscfg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f2xx_tim.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f2xx_usart.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="SPL\src\stm32f2xx_wwdg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="cmsis\core_cm3.h" />
+		<Unit filename="cmsis\core_cmFunc.h" />
+		<Unit filename="cmsis\core_cmInstr.h" />
+		<Unit filename="inc\AX25.h" />
+		<Unit filename="inc\DAC.h" />
+		<Unit filename="inc\LIS302.h" />
+		<Unit filename="inc\MCP9800.h" />
+		<Unit filename="inc\MS5607.h" />
+		<Unit filename="inc\RFM23.h" />
+		<Unit filename="inc\RRC_Bat.h" />
+		<Unit filename="inc\RTC.h" />
+		<Unit filename="inc\RingBuffer.h" />
+		<Unit filename="inc\adc.h" />
+		<Unit filename="inc\gps.h" />
+		<Unit filename="inc\i2c.h" />
+		<Unit filename="inc\sdio.h" />
+		<Unit filename="inc\spi.h" />
+		<Unit filename="inc\stm32_ub_fatfs.h" />
+		<Unit filename="inc\stm32f2xx.h" />
+		<Unit filename="inc\stm32f2xx_conf.h" />
+		<Unit filename="inc\system_stm32f2xx.h" />
+		<Unit filename="inc\usart.h" />
+		<Unit filename="inc\watchdog.h" />
+		<Unit filename="readme.txt" />
+		<Unit filename="src\ADC.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\AX25.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\DAC.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\LIS302.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\MCP9800.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\MS5607.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\RFM23.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\RRC_Bat.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\RTC.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\RingBuffer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\Sine_table.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\fatfs\diskio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\fatfs\diskio.h" />
+		<Unit filename="src\fatfs\ff.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\fatfs\ff.h" />
+		<Unit filename="src\fatfs\ffconf.h" />
+		<Unit filename="src\fatfs\lo_level_ub\stm32_ub_atadrive.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\fatfs\lo_level_ub\stm32_ub_atadrive.h" />
+		<Unit filename="src\fatfs\lo_level_ub\stm32_ub_sdcard.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\fatfs\lo_level_ub\stm32_ub_sdcard.h" />
+		<Unit filename="src\fatfs\lo_level_ub\stm32_ub_usbdisk.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\fatfs\lo_level_ub\stm32_ub_usbdisk.h" />
+		<Unit filename="src\gps.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\i2c.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\sdio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\spi.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\startup_stm32f2xx.S">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\stm32_ub_fatfs.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\stm32_ub_fatfs.h" />
+		<Unit filename="src\system_stm32f2xx.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\usart.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src\watchdog.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="stm32f205rb_flash.ld" />
+		<Unit filename="stm32f205rb_sram.ld" />
+		<Extensions>
+			<code_completion />
+			<debugger>
+				<target_debugging_settings target="Debug" active_interface="ST-link">
+					<debug_interface interface_id="ST-link" ip_address="localhost" ip_port="4242" path="${EMBLOCKS}\share\contrib" executable="STLinkGDB.exe" description=".\STM32F20x.svd" dont_start_server="false" backoff_time="1000" options="2" reg_filter="0" active_family="STMicroelectronics">
+						<family_options family_id="STMicroelectronics">
+							<option opt_id="ID_JTAG_SWD" opt_value="swd" />
+							<option opt_id="ID_VECTOR_START" opt_value="0x08000000" />
+							<option opt_id="ID_RESET_TYPE" opt_value="System" />
+							<option opt_id="ID_LOAD_PROGRAM" opt_value="1" />
+							<option opt_id="ID_SEMIHOST_CHECK" opt_value="0" />
+							<option opt_id="ID_RAM_EXEC" opt_value="0" />
+							<option opt_id="ID_VEC_TABLE" opt_value="1" />
+							<option opt_id="ID_DONT_CONN_RESET" opt_value="0" />
+							<option opt_id="ID_ALL_MODE_DEBUG" opt_value="0" />
+							<option opt_id="ID_DEV_ADDR" opt_value="" />
+							<option opt_id="ID_VERBOSE_LEVEL" opt_value="3" />
+						</family_options>
+					</debug_interface>
+				</target_debugging_settings>
+			</debugger>
+			<envvars />
+			<DoxyBlocks>
+				<comment_style block="0" line="0" />
+				<doxyfile_project />
+				<doxyfile_build />
+				<doxyfile_warnings />
+				<doxyfile_output />
+				<doxyfile_dot />
+				<general />
+			</DoxyBlocks>
+		</Extensions>
+	</Project>
+</EmBlocks_project_file>
